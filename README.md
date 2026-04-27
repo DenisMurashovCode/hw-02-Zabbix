@@ -3,7 +3,7 @@
 
 ## Задание 1: Установите Zabbix Server с веб-интерфейсом.
 
-![Интерфейс GitLab](./img/task1.png)
+![1](./img/task1.png)
 
 Команды:
 
@@ -26,10 +26,11 @@ sudo systemctl enable zabbix-server apache2 zabbix-agent
 
 ## Задание 2: Установка Zabbix Agent.
 
-![Интерфейс GitLab](./img/task2.png)
-![Интерфейс GitLab](./img/task3.png)
-![Интерфейс GitLab](./img/task4.png)
-![Интерфейс GitLab](./img/task5.png)
+
+![2](./img/task2.png)
+![3](./img/task3.png)
+![4](./img/task4.png)
+![5](./img/task5.png)
 
 
 wget https://repo.zabbix.com/zabbix/6.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.0-4+ubuntu22.04_all.deb
@@ -39,10 +40,10 @@ sudo apt update
 sudo apt install zabbix-agent -y
 
 sudo nano /etc/zabbix/zabbix_agentd.conf
-# В файле были изменены следующие параметры:
-# Server=192.168.1.110          (IP-адрес Zabbix-сервера)
-# ServerActive=192.168.1.110    (IP-адрес Zabbix-сервера)
-# Hostname=Ubuntu-Host-2        (Имя хоста для отображения в панели)
+В файле были изменены следующие параметры:
+Server=192.168.1.110          (IP-адрес Zabbix-сервера)
+ServerActive=192.168.1.110    (IP-адрес Zabbix-сервера)
+Hostname=Ubuntu-Host-2        (Имя хоста для отображения в панели)
 
 sudo systemctl restart zabbix-agent
 sudo systemctl enable zabbix-agent
